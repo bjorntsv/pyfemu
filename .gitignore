@@ -1,0 +1,8 @@
+# Compiled source
+__pycache__/
+
+# Folders (distribution / packaging)
+FEM updating/
+
+# Specific files
+
