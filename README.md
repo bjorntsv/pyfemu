@@ -10,14 +10,11 @@ These files can be used directly by downloading or cloning the repository. Note 
 
 ## Content
 
-![test](example_fig1.png=raw=true)
+![test](01_Figures/Fig1.png)
 
 FE model updating is performed by considering a simply supported beam. Examples of results from the postprocessing is shown below (included in the
 example files).
 
-![](example_fig1.svg)
-![](example_fig2.svg)
-![](example_fig3.svg)
 
 The files include:
 - Implementation of the *theoretical framework* of sensitivity-based FE model updating by perturbation analysis.
