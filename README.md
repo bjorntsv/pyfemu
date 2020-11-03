@@ -10,7 +10,7 @@ These files can be used directly by downloading or cloning the repository. Note 
 
 ## Content
 
-![test](fig.png)
+![test](test_fig.png)
 
 ![alt text](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 1")
 
