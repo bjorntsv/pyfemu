@@ -1,0 +1,306 @@
+1
+
+   Abaqus 3DEXPERIENCE R2017x                                  Date 03-Nov-2020   Time 11:18:53
+   For use by NTNU NORGES TEKNISK NATURVITENSKAPELIGE UNIVERSITET under license from Dassault Systemes or its subsidiary.
+
+
+
+                         The Abaqus Software is a product of:
+
+                           Dassault Systemes SIMULIA Corp.
+                           1301 Atwood Avenue, Suite 101W
+                              Johnston, RI 02919, USA
+ 
+
+
+                   The Abaqus Software is available only under license
+                   from Dassault Systemes or its subsidiary and may be
+                   used or reproduced only in accordance with the terms
+                   of such license.
+ 
+                          On machine NTNU12807 
+                          you are authorized to run
+                          Abaqus/Foundation until 30-Sep-2021
+
+                          Your site id is: 100000000001981 
+
+
+ 
+                    For assistance or any other information you may
+                    obtain contact information for your local office
+                    from the world wide web at:
+
+                      http://www.3ds.com/products/simulia/locations/
+
+ 
+                * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
+                *                                                         * 
+                *                   *****************                     * 
+                *                   *  N O T I C E  *                     * 
+                *                   *****************                     * 
+                *                                                         * 
+                *                                                         * 
+                *               Abaqus 3DEXPERIENCE R2017x                * 
+                *                                                         * 
+                *          BUILD ID: 2016_09_27-23.54.59 126836           * 
+                *                                                         * 
+                *                                                         * 
+                *  Please make sure you are using                         * 
+                *  release 3DEXPERIENCE R2017x manuals                    * 
+                *  plus the notes accompanying this release.              * 
+                *                                                         * 
+                *                                                         * 
+                *                                                         * 
+                *                                                         * 
+                *                                                         * 
+                *   This program may not be used for commercial purposes  * 
+                *           without payment of a commercial fee.          * 
+                *                                                         * 
+                * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
+
+
+ 
+
+
+
+     PROCESSING PART, INSTANCE, AND ASSEMBLY INFORMATION
+   *******************************************************
+
+
+     END PROCESSING PART, INSTANCE, AND ASSEMBLY INFORMATION
+   ***********************************************************
+
+
+
+
+     OPTIONS BEING PROCESSED
+   ***************************
+
+
+  *Heading
+          Analysis of simply supported beam                                                                                                                                                                                                                               
+  *Node
+  *Element, type=B31
+  *Nset, nset=ASSEMBLY_BEAM-1__PICKEDSET2
+  *Elset, elset=ASSEMBLY_BEAM-1__PICKEDSET2
+  *Element, type=MASS
+  *Nset, nset=ASSEMBLY_SENSOR_NODES
+  *Nset, nset=ASSEMBLY__PICKEDSET4
+  *Nset, nset=ASSEMBLY__PICKEDSET5
+  *Elset, elset=ASSEMBLY__PICKEDSET6_M1_
+  *Elset, elset=ASSEMBLY__PICKEDSET7_M2_
+  *material, name=STEEL
+  *density
+  *elastic
+  *mass, elset=ASSEMBLY__PICKEDSET6_M1_
+  *mass, elset=ASSEMBLY__PICKEDSET7_M2_
+  *beamsection, elset=ASSEMBLY_BEAM-1__PICKEDSET2, poisson=0.3, temperature=GRADIENTS, material=STEEL, section=RECTANGULAR
+  *mass, elset=ASSEMBLY__PICKEDSET6_M1_
+  *mass, elset=ASSEMBLY__PICKEDSET7_M2_
+  *boundary
+  *boundary
+  *boundary
+  *boundary
+  *output, field
+  *output, field
+  *output, field
+  *Step, name=Modal, nlgeom=NO, perturbation
+  *frequency, eigensolver=LANCZOS, normalization=DISPLACEMENT, sim=NO, acousticcoupling=ON
+  *output, field
+  *Step, name=Modal, nlgeom=NO, perturbation
+  *Step, name=Modal, nlgeom=NO, perturbation
+  Modal analysis                                                                  
+  *frequency, eigensolver=LANCZOS, normalization=DISPLACEMENT, sim=NO, acousticcoupling=ON
+  *frequency, eigensolver=LANCZOS, normalization=DISPLACEMENT, sim=NO, acousticcoupling=ON
+  *output, field
+  *nodeoutput
+  *endstep
+  *boundary
+  *boundary
+  *Step, name=Modal, nlgeom=NO, perturbation
+  *frequency, eigensolver=LANCZOS, normalization=DISPLACEMENT, sim=NO, acousticcoupling=ON
+  *frequency, eigensolver=LANCZOS, normalization=DISPLACEMENT, sim=NO, acousticcoupling=ON
+  *endstep
+
+
+
+                            P R O B L E M   S I Z E
+
+
+          NUMBER OF ELEMENTS IS                                    12
+          NUMBER OF NODES IS                                       31
+          NUMBER OF NODES DEFINED BY THE USER                      11
+          NUMBER OF INTERNAL NODES GENERATED BY THE PROGRAM        20
+          TOTAL NUMBER OF VARIABLES IN THE MODEL                   66
+          (DEGREES OF FREEDOM PLUS MAX NO. OF ANY LAGRANGE MULTIPLIER
+           VARIABLES. INCLUDE *PRINT,SOLVE=YES TO GET THE ACTUAL NUMBER.)
+
+
+
+                              END OF USER INPUT PROCESSING
+
+
+
+     JOB TIME SUMMARY
+       USER TIME (SEC)      =  0.10000    
+       SYSTEM TIME (SEC)    =   0.0000    
+       TOTAL CPU TIME (SEC) =  0.10000    
+       WALLCLOCK TIME (SEC) =          0
+1
+
+   Abaqus 3DEXPERIENCE R2017x                                  Date 03-Nov-2020   Time 11:19:01
+   For use by NTNU NORGES TEKNISK NATURVITENSKAPELIGE UNIVERSITET under license from Dassault Systemes or its subsidiary.
+
+     Analysis of simply supported beam                                                         STEP    1  INCREMENT    1
+     Modal analysis                                                                       TIME COMPLETED IN THIS STEP   0.00    
+
+
+                        S T E P       1     C A L C U L A T I O N   O F   E I G E N V A L U E S
+
+                                            F O R   N A T U R A L   F R E Q U E N C I E S
+
+
+
+          Modal analysis                                                                  
+
+     THE LANCZOS EIGENSOLVER IS USED FOR THIS ANALYSIS
+     Abaqus WILL COMPUTE UNCOUPLED
+      STRUCTURAL AND ACOUSTIC MODES
+     NUMBER OF EIGENVALUES                      6
+     HIGHEST FREQUENCY OF INTEREST                  1.00000E+18
+     MAXIMUM NUMBER OF STEPS WITHIN RUN               35
+     BLOCK SIZE FOR LANCZOS PROCEDURE                  6
+     THE EIGENVECTORS ARE SCALED SO THAT 
+      THE LARGEST DISPLACEMENT ENTRY IN EACH VECTOR
+      IS UNITY
+
+     THIS IS A LINEAR PERTURBATION STEP.
+     ALL LOADS ARE DEFINED AS CHANGE IN LOAD TO THE REFERENCE STATE
+
+
+
+                    TOTAL MASS OF MODEL
+
+                       389.0000    
+
+
+                    LOCATION OF THE CENTER OF MASS OF THE MODEL
+
+                       3.897172           0.000000           0.000000    
+
+
+                    MOMENTS OF INERTIA ABOUT THE ORIGIN
+                           I(XX)               I(YY)               I(ZZ)
+
+                      0.3270833           7804.422           7804.225    
+
+
+                    PRODUCTS OF INERTIA ABOUT THE ORIGIN
+                           I(XY)               I(XZ)               I(YZ)
+
+                       0.000000           0.000000          4.1557554E-19
+
+
+                    MOMENTS OF INERTIA ABOUT THE CENTER OF MASS
+                           I(XX)               I(YY)               I(ZZ)
+
+                      0.3270833           1896.309           1896.112    
+
+
+                    PRODUCTS OF INERTIA ABOUT THE CENTER OF MASS
+                           I(XY)               I(XZ)               I(YZ)
+
+                       0.000000           0.000000          4.1557554E-19
+  
+                   M E M O R Y   E S T I M A T E
+  
+ PROCESS      FLOATING PT       MINIMUM MEMORY        MEMORY TO
+              OPERATIONS           REQUIRED          MINIMIZE I/O
+             PER ITERATION           (MB)               (MB)
+  
+     1         1.37E+004               16                 25
+  
+ NOTE:
+      (1) SINCE ABAQUS DOES NOT PRE-ALLOCATE MEMORY AND ONLY ALLOCATES MEMORY AS NEEDED DURING THE ANALYSIS,
+          THE MEMORY REQUIREMENT PRINTED HERE CAN ONLY BE VIEWED AS A GENERAL GUIDELINE BASED ON THE BEST
+          KNOWLEDGE AVAILABLE AT THE BEGINNING OF A STEP BEFORE THE SOLUTION PROCESS HAS BEGUN.
+      (2) THE ESTIMATE IS NORMALLY UPDATED AT THE BEGINNING OF EVERY STEP. IT IS THE MAXIMUM VALUE OF THE
+          ESTIMATE FROM THE CURRENT STEP TO THE LAST STEP OF THE ANALYSIS, WITH UNSYMMETRIC SOLUTION TAKEN
+          INTO ACCOUNT IF APPLICABLE. 
+      (3) SINCE THE ESTIMATE IS BASED ON THE ACTIVE DEGREES OF FREEDOM IN THE FIRST ITERATION OF THE 
+          CURRENT STEP, THE MEMORY ESTIMATE MIGHT BE SIGNIFICANTLY DIFFERENT THAN ACTUAL USAGE FOR 
+          PROBLEMS WITH SUBSTANTIAL CHANGES IN ACTIVE DEGREES OF FREEDOM BETWEEN STEPS (OR EVEN WITHIN
+          THE SAME STEP). EXAMPLES ARE: PROBLEMS WITH SIGNIFICANT CONTACT CHANGES, PROBLEMS WITH MODEL
+          CHANGE, PROBLEMS WITH BOTH STATIC STEP AND STEADY STATE DYNAMIC PROCEDURES WHERE ACOUSTIC 
+          ELEMENTS WILL ONLY BE ACTIVATED IN THE STEADY STATE DYNAMIC STEPS.
+      (4) FOR MULTI-PROCESS EXECUTION, THE ESTIMATED VALUE OF FLOATING POINT OPERATIONS FOR EACH PROCESS
+          IS BASED ON AN INITIAL SCHEDULING OF OPERATIONS AND MIGHT NOT REFLECT THE ACTUAL FLOATING 
+          POINT OPERATIONS COMPLETED ON EACH PROCESS. OPERATIONS ARE DYNAMICALLY BALANCED DURING EXECUTION, 
+          SO THE ACTUAL BALANCE OF OPERATIONS BETWEEN PROCESSES IS EXPECTED TO BE BETTER THAN THE ESTIMATE
+          PRINTED HERE.
+      (5) THE UPPER LIMIT OF MEMORY THAT CAN BE ALLOCATED BY ABAQUS WILL IN GENERAL DEPEND ON THE VALUE OF
+          THE "MEMORY" PARAMETER AND THE AMOUNT OF PHYSICAL MEMORY AVAILABLE ON THE MACHINE. PLEASE SEE
+          THE "ABAQUS ANALYSIS USER'S MANUAL" FOR MORE DETAILS. THE ACTUAL USAGE OF MEMORY AND OF DISK
+          SPACE FOR SCRATCH DATA WILL DEPEND ON THIS UPPER LIMIT AS WELL AS THE MEMORY REQUIRED TO MINIMIZE
+          I/O. IF THE MEMORY UPPER LIMIT IS GREATER THAN THE MEMORY REQUIRED TO MINIMIZE I/O, THEN THE ACTUAL
+          MEMORY USAGE WILL BE CLOSE TO THE ESTIMATED "MEMORY TO MINIMIZE I/O" VALUE, AND THE SCRATCH DISK
+          USAGE WILL BE CLOSE-TO-ZERO; OTHERWISE, THE ACTUAL MEMORY USED WILL BE CLOSE TO THE PREVIOUSLY
+          MENTIONED MEMORY LIMIT, AND THE SCRATCH DISK USAGE WILL BE ROUGHLY PROPORTIONAL TO THE DIFFERENCE
+          BETWEEN THE ESTIMATED "MEMORY TO MINIMIZE I/O" AND THE MEMORY UPPER LIMIT. HOWEVER ACCURATE
+          ESTIMATE OF THE SCRATCH DISK SPACE IS NOT POSSIBLE.
+      (6) USING "*RESTART, WRITE" CAN GENERATE A LARGE AMOUNT OF DATA WRITTEN IN THE WORK DIRECTORY.
+
+
+                              E I G E N V A L U E    O U T P U T     
+
+ MODE NO      EIGENVALUE              FREQUENCY         GENERALIZED MASS   COMPOSITE MODAL DAMPING            
+                             (RAD/TIME)   (CYCLES/TIME)
+
+
+       1       116.23         10.781         1.7158         207.10         0.0000    
+       2       464.74         21.558         3.4310         207.12         0.0000    
+       3       1724.7         41.529         6.6095         207.94         0.0000    
+       4       6888.1         82.995         13.209         207.98         0.0000    
+       5       12117.         110.08         17.520         132.29         0.0000    
+       6       35950.         189.60         30.176         132.30         0.0000    
+
+
+          P A R T I C I P A T I O N   F A C T O R S
+
+ MODE NO    X-COMPONENT    Y-COMPONENT    Z-COMPONENT    X-ROTATION     Y-ROTATION     Z-ROTATION 
+
+       1      5.23070E-17     1.2535        5.71884E-16   -3.68642E-18   -2.84878E-15     4.8425    
+       2     -2.48510E-16   -3.13323E-16     1.2534        5.09944E-19    -4.8420       -1.81706E-15
+       3      7.65055E-17    8.77856E-03    2.50308E-16   -1.58282E-18   -2.28651E-15     2.3327    
+       4     -4.63289E-16   -5.15564E-17    8.77816E-03    1.51604E-16    -2.3321        6.66052E-17
+       5     -2.25546E-14   -0.41206        2.08589E-15    5.68683E-15   -1.67355E-14    -1.6961    
+       6      2.76708E-11    2.01092E-02   -1.44144E-12   -6.25920E-12    1.35777E-11    -1.2455    
+
+
+                    E F F E C T I V E   M A S S
+
+ MODE NO    X-COMPONENT    Y-COMPONENT    Z-COMPONENT    X-ROTATION     Y-ROTATION     Z-ROTATION 
+
+       1      5.66634E-31     325.42        6.77327E-29    2.81445E-33    1.68074E-27     4856.4    
+       2      1.27911E-29    2.03333E-29     325.40        5.38601E-35     4856.0        6.83850E-28
+       3      1.21708E-30    1.60244E-02    1.30281E-29    5.20952E-34    1.08713E-27     1131.5    
+       4      4.46399E-29    5.52821E-31    1.60260E-02    4.78011E-30     1131.1        9.22644E-31
+       5      6.72948E-26     22.461        5.75565E-28    4.27811E-27    3.70501E-26     380.55    
+       6      1.01301E-19    5.35011E-02    2.74894E-22    5.18335E-21    2.43908E-20     205.25    
+
+ TOTAL        1.01302E-19     347.95         325.42        5.18335E-21     5987.1         6573.7    
+
+
+          THE ANALYSIS HAS BEEN COMPLETED
+
+
+
+                              ANALYSIS COMPLETE
+
+
+
+     JOB TIME SUMMARY
+       USER TIME (SEC)      =  0.10000    
+       SYSTEM TIME (SEC)    =   0.0000    
+       TOTAL CPU TIME (SEC) =  0.10000    
+       WALLCLOCK TIME (SEC) =          0

@@ -1,9 +1,6 @@
-# Compiled source
-__pycache__/
-
 # Folders (distribution / packaging)
 01_Figures/
-FEM updating/
+delete/
 
 # Specific files
 Numerical case study - description.docx

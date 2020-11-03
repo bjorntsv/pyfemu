@@ -1,0 +1,8 @@
+
+FOLDER AND FILE DESCRIPTION
+
+01_FE model
+Folder containing ss_beam, the numerical FE model to perform model updating on.
+
+02_Measured
+Results to update the FE model against.

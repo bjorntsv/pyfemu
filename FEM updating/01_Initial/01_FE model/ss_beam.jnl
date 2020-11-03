@@ -1,0 +1,103 @@
+# -*- coding: mbcs -*-
+from part import *
+from material import *
+from section import *
+from assembly import *
+from step import *
+from interaction import *
+from load import *
+from mesh import *
+from optimization import *
+from job import *
+from sketch import *
+from visualization import *
+mdb.Model(name='Model-1')
+mdb.models['Model-1'].Material(name='Steel')
+mdb.models['Model-1'].materials['Steel'].Density(table=((7850.0, ), ))
+mdb.models['Model-1'].materials['Steel'].Elastic(table=((241500000000.0, 0.3), 
+    ))
+mdb.models['Model-1'].RectangularProfile(a=0.05, b=0.1, name='R_100_50')
+mdb.models['Model-1'].BeamSection(consistentMassMatrix=False, integration=
+    DURING_ANALYSIS, material='Steel', name='Beam_R_100_50', poissonRatio=0.3, 
+    profile='R_100_50', temperatureVar=LINEAR)
+mdb.models['Model-1'].ConstrainedSketch(name='beamSketch', sheetSize=20.0)
+mdb.models['Model-1'].sketches['beamSketch'].Line(point1=(0.0, 0.0), point2=(
+    0.8, 0.0))
+mdb.models['Model-1'].sketches['beamSketch'].Line(point1=(0.8, 0.0), point2=(
+    1.6, 0.0))
+mdb.models['Model-1'].sketches['beamSketch'].Line(point1=(1.6, 0.0), point2=(
+    2.4, 0.0))
+mdb.models['Model-1'].sketches['beamSketch'].Line(point1=(2.4, 0.0), point2=(
+    3.2, 0.0))
+mdb.models['Model-1'].sketches['beamSketch'].Line(point1=(3.2, 0.0), point2=(
+    4.0, 0.0))
+mdb.models['Model-1'].sketches['beamSketch'].Line(point1=(4.0, 0.0), point2=(
+    4.8, 0.0))
+mdb.models['Model-1'].sketches['beamSketch'].Line(point1=(4.8, 0.0), point2=(
+    5.6, 0.0))
+mdb.models['Model-1'].sketches['beamSketch'].Line(point1=(5.6, 0.0), point2=(
+    6.4, 0.0))
+mdb.models['Model-1'].sketches['beamSketch'].Line(point1=(6.4, 0.0), point2=(
+    7.2, 0.0))
+mdb.models['Model-1'].sketches['beamSketch'].Line(point1=(7.2, 0.0), point2=(
+    8.0, 0.0))
+mdb.models['Model-1'].Part(dimensionality=THREE_D, name='Beam', type=
+    DEFORMABLE_BODY)
+mdb.models['Model-1'].parts['Beam'].BaseWire(sketch=
+    mdb.models['Model-1'].sketches['beamSketch'])
+mdb.models['Model-1'].parts['Beam'].SectionAssignment(offset=0.0, offsetField=
+    '', offsetType=MIDDLE_SURFACE, region=Region(
+    edges=mdb.models['Model-1'].parts['Beam'].edges.findAt(((0.2, 0.0, 0.0), ), 
+    ((1.0, 0.0, 0.0), ), ((1.8, 0.0, 0.0), ), ((2.6, 0.0, 0.0), ), ((3.4, 0.0, 
+    0.0), ), ((4.2, 0.0, 0.0), ), ((5.0, 0.0, 0.0), ), ((5.8, 0.0, 0.0), ), ((
+    6.6, 0.0, 0.0), ), ((7.4, 0.0, 0.0), ), )), sectionName='Beam_R_100_50', 
+    thicknessAssignment=FROM_SECTION)
+mdb.models['Model-1'].parts['Beam'].assignBeamSectionOrientation(method=
+    N1_COSINES, n1=(0.0, 1.0, 0.0), region=Region(
+    edges=mdb.models['Model-1'].parts['Beam'].edges.findAt(((0.2, 0.0, 0.0), ), 
+    ((1.0, 0.0, 0.0), ), ((1.8, 0.0, 0.0), ), ((2.6, 0.0, 0.0), ), ((3.4, 0.0, 
+    0.0), ), ((4.2, 0.0, 0.0), ), ((5.0, 0.0, 0.0), ), ((5.8, 0.0, 0.0), ), ((
+    6.6, 0.0, 0.0), ), ((7.4, 0.0, 0.0), ), )))
+mdb.models['Model-1'].parts['Beam'].setElementType(elemTypes=(ElemType(
+    elemCode=B31, elemLibrary=STANDARD), ), regions=(
+    mdb.models['Model-1'].parts['Beam'].edges.findAt(((0.2, 0.0, 0.0), ), ((
+    1.0, 0.0, 0.0), ), ((1.8, 0.0, 0.0), ), ((2.6, 0.0, 0.0), ), ((3.4, 0.0, 
+    0.0), ), ((4.2, 0.0, 0.0), ), ((5.0, 0.0, 0.0), ), ((5.8, 0.0, 0.0), ), ((
+    6.6, 0.0, 0.0), ), ((7.4, 0.0, 0.0), ), ), ))
+mdb.models['Model-1'].parts['Beam'].seedPart(deviationFactor=0.1, 
+    minSizeFactor=0.1, size=0.8)
+mdb.models['Model-1'].parts['Beam'].generateMesh()
+mdb.models['Model-1'].rootAssembly.Instance(dependent=ON, name='Beam-1', part=
+    mdb.models['Model-1'].parts['Beam'])
+mdb.models['Model-1'].rootAssembly.Set(name='SENSOR_NODES', vertices=
+    mdb.models['Model-1'].rootAssembly.instances['Beam-1'].vertices.findAt(((
+    0.0, 0.0, 0.0), ), ((0.8, 0.0, 0.0), ), ((1.6, 0.0, 0.0), ), ((2.4, 0.0, 
+    0.0), ), ((3.2, 0.0, 0.0), ), ((4.0, 0.0, 0.0), ), ((4.8, 0.0, 0.0), ), ((
+    5.6, 0.0, 0.0), ), ((6.4, 0.0, 0.0), ), ((7.2, 0.0, 0.0), ), ((8.0, 0.0, 
+    0.0), ), ))
+mdb.models['Model-1'].FrequencyStep(description='Modal analysis', name='Modal', 
+    numEigen=6, previous='Initial')
+mdb.models['Model-1'].fieldOutputRequests['F-Output-1'].setValues(variables=(
+    'U', 'RF'))
+mdb.models['Model-1'].DisplacementBC(amplitude=UNSET, createStepName='Initial', 
+    distributionType=UNIFORM, fieldName='', fixed=OFF, localCsys=None, name=
+    'BC1', region=Region(
+    vertices=mdb.models['Model-1'].rootAssembly.instances['Beam-1'].vertices.findAt(
+    ((0.0, 0.0, 0.0), ), )), u1=0.0, u2=0.0, u3=0.0, ur1=0.0, ur2=UNSET, ur3=
+    UNSET)
+mdb.models['Model-1'].DisplacementBC(amplitude=UNSET, createStepName='Initial', 
+    distributionType=UNIFORM, fieldName='', fixed=OFF, localCsys=None, name=
+    'BC2', region=Region(
+    vertices=mdb.models['Model-1'].rootAssembly.instances['Beam-1'].vertices.findAt(
+    ((8.0, 0.0, 0.0), ), )), u1=UNSET, u2=0.0, u3=0.0, ur1=UNSET, ur2=UNSET, 
+    ur3=UNSET)
+mdb.models['Model-1'].rootAssembly.engineeringFeatures.PointMassInertia(alpha=
+    0.0, composite=0.0, mass=50, name='M1', region=Region(
+    vertices=mdb.models['Model-1'].rootAssembly.instances['Beam-1'].vertices.findAt(
+    ((2.4, 0.0, 0.0), ), )))
+mdb.models['Model-1'].rootAssembly.engineeringFeatures.PointMassInertia(alpha=
+    0.0, composite=0.0, mass=25, name='M2', region=Region(
+    vertices=mdb.models['Model-1'].rootAssembly.instances['Beam-1'].vertices.findAt(
+    ((5.6, 0.0, 0.0), ), )))
+mdb.models['Model-1'].rootAssembly.regenerate()
+# Save by bjorntsv on 2020_11_03-11.18.42; build 2017 2016_09_27-23.54.59 126836
