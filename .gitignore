@@ -2,6 +2,7 @@
 __pycache__/
 
 # Folders (distribution / packaging)
+01_Figures/
 FEM updating/
 
 # Specific files
