@@ -3,20 +3,16 @@
 Finite element (FE) model updating in Python by an example. The framework of sensitivity-based FE model updating is implemented in Python
 and validated through a simple numerical case study utilizing the FE model program Abaqus.
 
-Please cite both the original research paper which the code was developed for, and the code, if used for research purposes.
+Please cite both the original research paper which the code was developed for (to be updated), and the code (to be updated), if used for research purposes.
 
 ## Installation
-These files can be used directly by downloading or cloning the repository. Note that the FEM software Abaqus is required to run the files.
+These files can be used directly by downloading or cloning the repository. Note that the FE model software Abaqus is required to run the files.
 
 ## Content
 
-FE model updating is performed by considering a simply supported beam. Examples of results from the postprocessing is shown below (included in the
-example files).
+![](ss_beam.svg)
 
-![](fig2.svg)
-![](fig3.svg)
-
-The files include:
+FE model updating is performed by considering a simply supported beam. The files include:
 - Implementation of the *theoretical framework* of sensitivity-based FE model updating by perturbation analysis.
 - Demonstration of an *analysis framework*, or workflow setup, utilizing the numerical FE model program Abaqus.
 - Description of a numerical case study including results for validation.
@@ -28,10 +24,14 @@ the provided files.
 The easiest way to get into the use and understanding is to download and run the example files. For additional details of theory,
 implementation and use, please see the reference below.
 
+Examples of results from the postprocessing is shown below (included in the example files).
+
+![](fig2.svg)
+![](fig3.svg)
 
 ## Support
 
 Please [open an issue](https://github.com/bjorntsv/pyfemu/issues/new) for support.
 
 ## References
-[1]
+To be updated.
