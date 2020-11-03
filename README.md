@@ -10,8 +10,6 @@ These files can be used directly by downloading or cloning the repository. Note 
 
 ## Content
 
-![](ss_beam.svg)
-
 FE model updating is performed by considering a simply supported beam. The files include:
 - Implementation of the *theoretical framework* of sensitivity-based FE model updating by perturbation analysis.
 - Demonstration of an *analysis framework*, or workflow setup, utilizing the numerical FE model program Abaqus.
