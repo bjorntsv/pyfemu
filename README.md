@@ -10,12 +10,9 @@ These files can be used directly by downloading or cloning the repository. Note 
 
 ## Content
 
-![](ss_beam.svg)
-
 FE model updating is performed by considering a simply supported beam. Examples of results from the postprocessing is shown below (included in the
 example files).
 
-![](fig1.svg)
 ![](fig2.svg)
 ![](fig3.svg)
 
