@@ -10,7 +10,9 @@ These files can be used directly by downloading or cloning the repository. Note 
 
 ## Content
 
-![test](01_Figures/Fig1.png)
+![test](fig.png)
+
+![alt text](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 1")
 
 FE model updating is performed by considering a simply supported beam. Examples of results from the postprocessing is shown below (included in the
 example files).
