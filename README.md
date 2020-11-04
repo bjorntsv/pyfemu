@@ -19,7 +19,7 @@ Experience with Abaqus and Abaqus scripting is not needed, but preferable, for a
 The workflow setup is general and the theoretical framework of the model updating can be utilized with other FEM programs by simple modifications to
 the provided files.
 
-The easiest way to get into the use and understanding is to download and run the example files. For additional details of theory,
+The easiest way to get into the use and understanding is to download and run the example file (*01_run.py* and *02_run_pp.py*). For additional details of theory,
 implementation and use, please see the reference below.
 
 Examples of results from the postprocessing is shown below (included in the example files).
