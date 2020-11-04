@@ -3,7 +3,9 @@
 Finite element (FE) model updating in Python by an example. The framework of sensitivity-based FE model updating is implemented in Python
 and validated through a simple numerical case study utilizing the FE model program Abaqus.
 
-Please cite both the original research paper which the code was developed for (reference to be included), and the code (reference to be included), if used for research purposes.
+Please cite both the original research paper which the code was developed for (reference to be included), and the code, if used for research purposes.
+
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.4243875.svg)](https://doi.org/10.5281/zenodo.4243875)
 
 ## Installation
 The files can be used directly by downloading or cloning the repository. Note that the FE model software Abaqus is required to run the files.
