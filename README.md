@@ -12,6 +12,10 @@ The files can be used directly by downloading or cloning the repository. Note th
 
 ## Content
 
+<p align="center">
+  <img src="ss_beam.svg">
+</p>
+
 <img align="center" src="fig1.svg">
 
 ![](fig1.svg)
