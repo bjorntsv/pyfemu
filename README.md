@@ -11,15 +11,14 @@ Please cite both the original research paper which the code was developed for (r
 The files can be used directly by downloading or cloning the repository. Note that the FE model software ABAQUS is required to run the files.
 
 ## Content
-
-<p align="center">
-  <img width=400 height=125 src="ss_beam.svg">
-</p>
-
 FE model updating is performed by considering a simply supported beam. The files include:
 - Implementation of the *theoretical framework* of sensitivity-based FE model updating by perturbation analysis.
 - Demonstration of an *analysis framework*, or workflow setup, utilizing the numerical FE model program ABAQUS.
 - Description of a numerical case study including results for validation.
+
+<p align="center">
+  <img width=400 height=125 src="ss_beam.svg">
+</p>
 
 Experience with ABAQUS and ABAQUS scripting is not needed, but preferable, for an increased understanding of the numerical case study implementation.
 The workflow setup is general and the theoretical framework of the model updating can be utilized with other FEM programs by simple modifications to
