@@ -13,7 +13,7 @@ The files can be used directly by downloading or cloning the repository. Note th
 ## Content
 
 <p align="center">
-  <img width=300 height=95 src="ss_beam.svg">
+  <img width=400 height=125 src="ss_beam.svg">
 </p>
 
 FE model updating is performed by considering a simply supported beam. The files include:
