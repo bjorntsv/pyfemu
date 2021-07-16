@@ -41,4 +41,6 @@ The analysis framework is established using Python version 3.7.2, including Scip
 Please [open an issue](https://github.com/bjorntsv/pyfemu/issues/new) for support.
 
 ## References
-To be updated.
+[1]	B. T. Svendsen, Ø. W. Petersen, G. T. Frøseth, and A. Rønnquist, “Improved finite element model updating of a full-scale steel bridge using sensitivity analysis,” Struct. Infrastruct. Eng., pp. 1–17, Jul. 2021, doi: https://doi.org/10.1080/15732479.2021.1944227.
+
+[2]	B. T. Svendsen, “FE model updating in Python.” 2020. doi: http://doi.org/10.5281/zenodo.4243875.
