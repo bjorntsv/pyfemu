@@ -11,6 +11,7 @@ import os
 import shutil
 import pickle
 import time
+import warnings
 import numpy as np
 
 from scipy.optimize import lsq_linear
@@ -35,6 +36,9 @@ mode_list = ['Mode 01', 'Mode 02', 'Mode 03', 'Mode 04']
 # -------------------------------------------------------------------------- #
 # INITIAL
 # -------------------------------------------------------------------------- #
+
+# Ignore UserWarning
+warnings.filterwarnings('ignore')
 
 # Folder structure
 folder_1 = '02_Analysis files'
@@ -61,12 +65,12 @@ modes_est = np.load('01_Initial/02_Measured/ss_beam_0_modes_all.npy')
 # Copy relevant model files to directory
 src = ('01_Initial/01_FE model/')
 
-files_to_copy = ['ss_beam.cae', 'ss_beam.jnl']
+files_to_copy = ['ss_beam.cae']
 
 # Copy
 for file in files_to_copy:
 
-    shutil.copy(src + file, file)
+    shutil.copy(src + file, file, follow_symlinks=True)
 
 # Set work directory
 cwd = os.getcwd()
