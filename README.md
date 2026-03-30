@@ -24,7 +24,7 @@ Experience with ABAQUS and ABAQUS scripting is not needed, but preferable, for a
 
 The easiest way to get into the use and understanding is to download and run the example files in the following order:
  - Navigate to the folder "01_Initial/01_FE_model" and run the file *abaqus_run_file.py* to generate model files for your current ABAQUS version.
- - Run *01_run.py* for the model updating and *02_run_pp.py* for post-processing the results.
+ - Navigate back to the main folder and run *01_run.py* for the model updating and *02_run_pp.py* for the post-processing of the results.
  
 For additional details of theory, implementation and use, please see the references below. Examples of results from the postprocessing is shown in the [description of the numerical case study](https://www.researchgate.net/publication/354380166_FE_model_updating_in_Python).
 
