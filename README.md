@@ -4,7 +4,7 @@ Finite element (FE) model updating in Python by an example. The framework of sen
 
 Please cite both the original research paper which the code was developed for [1], and the code [2], if used for research purposes.
 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.4243875.svg)](https://doi.org/10.5281/zenodo.4243875)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.4243875.svg)](https://doi.org/10.5281/zenodo.4243874)
 
 ## Installation
 The files can be used directly by downloading or cloning/forking the repository. Note that the FE model software ABAQUS is required to run the files (currently up to and including Abaqus version 2025 is tested and supported).
