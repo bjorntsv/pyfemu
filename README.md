@@ -1,3 +1,5 @@
+![](logo.svg)
+
 # FE model updating in Python
 
 Finite element (FE) model updating in Python by an example. The framework of sensitivity-based FE model updating is implemented in Python and validated through a simple numerical case study utilizing any release of the FE model program ABAQUS.
